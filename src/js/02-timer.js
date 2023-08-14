@@ -38,11 +38,11 @@ function addLeadingZero(value) {
 
 function timeStart() {
   const selectedDate = formIn.selectedDates[0];
+refs.btnStart.disabled = true;
 
   timeId = setInterval(() => {
     const startTime = new Date();
     const countdown = selectedDate - startTime;
-    refs.btnStart.disabled = true;
 
     if (countdown < 0) {
       clearInterval(timeId);
