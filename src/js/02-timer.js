@@ -47,7 +47,6 @@ function timeStart() {
 
     if (countdown < 0) {
       clearInterval(timeId);
-      refs.datetimePicker.disabled = false;
       return;
     }
     updateTime(convertMs(countdown));
