@@ -11,7 +11,6 @@ const refs = {
 };
 
 refs.btnStart.disabled = true;
-refs.datetimePicker.disabled = true;
 let timeId = null;
 
 const options = {
