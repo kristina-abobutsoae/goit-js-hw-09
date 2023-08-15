@@ -11,6 +11,7 @@ const refs = {
 };
 
 refs.btnStart.disabled = true;
+refs.datetimePicker.disabled = true;
 let timeId = null;
 
 const options = {
@@ -38,7 +39,8 @@ function addLeadingZero(value) {
 
 function timeStart() {
   const selectedDate = formIn.selectedDates[0];
-refs.btnStart.disabled = true;
+  refs.btnStart.disabled = true;
+  refs.datetimePicker.disabled = true;
 
   timeId = setInterval(() => {
     const startTime = new Date();
@@ -46,6 +48,7 @@ refs.btnStart.disabled = true;
 
     if (countdown < 0) {
       clearInterval(timeId);
+      refs.datetimePicker.disabled = false;
       return;
     }
     updateTime(convertMs(countdown));
